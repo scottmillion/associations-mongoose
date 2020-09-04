@@ -1,3 +1,5 @@
+// THIS IS A DEMO FOR ASSOCIATIONS USING "EMBEDDING DATA"
+
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/associations-demo', {
   useNewUrlParser: true,
@@ -8,7 +10,7 @@ mongoose.connect('mongodb://localhost:27017/associations-demo', {
 
 // ------------------SCHEMAS----------------------
 
-// POST SCHEMA
+// POST SCHEMA AND MODEL
 const postSchema = new mongoose.Schema({
   title: String,
   content: String
@@ -17,7 +19,7 @@ const Post = mongoose.model("Post", postSchema);
 
 // USER SCHEMA must be declared after POST SCHEMA, otherwise [postSchema] will return undefined.
 
-// USER SCHEMA
+// USER SCHEMA AND MODEL
 const userSchema = new mongoose.Schema({
   email: String,
   name: String,
